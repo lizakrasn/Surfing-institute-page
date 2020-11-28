@@ -26,7 +26,7 @@ export default Vue.extend({
 
 <style lang="sass" scoped>
   .blog
-    padding-bottom: 250px
+    padding-bottom: 240px
 
     &__posts-container
       width: 1056px
