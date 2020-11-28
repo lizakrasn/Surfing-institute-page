@@ -38,7 +38,8 @@ export default Vue.extend({
 
 <style lang="sass" scoped>
   .instractors
-    padding: 220px 180px
+    margin: 0 auto
+    padding: 220px 0 180px
 
     &__title
       margin-bottom: 87px
@@ -55,16 +56,11 @@ export default Vue.extend({
       align-items: center
 
     &__gallery
+      width: 1056px
       margin: 0 70px
       display: flex
       flex-direction: row
-      justify-content: center
-
-    &__gallery-item
-      margin-left: 90px
-
-    &__gallery .instractors__gallery-item:first-child
-      margin-left: 0px
+      justify-content: space-between
 
     &__button
       width: 40px
@@ -94,7 +90,4 @@ export default Vue.extend({
 
     &__dots-item--active
       background-color: black
-
-
-
 </style>

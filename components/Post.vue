@@ -1,0 +1,65 @@
+<template lang="pug">
+  .post
+    img(v-bind:src="imageUrl" alt="surfer").post__image
+    .post__info
+      p.post__title {{title}}
+      p.post__text {{text}}
+      button(type="button").post__button Read More
+</template>
+
+<script lang="ts">
+import Vue from 'vue'
+export default Vue.extend({
+  name: "Post",
+  props: ["imageUrl", "title", "text"]
+})
+</script>
+
+<style lang="sass" scoped>
+  .post
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+
+    &__image
+      width: 525px
+      height: 355px
+      object-fit: cover
+
+    &__title
+      margin-bottom: 15px
+      font-family: 'Playfair Display', 'Times New Roman', Times, serif
+      font-size: 39px
+      font-style: italic
+    
+    &__text
+      width: 415px
+      font-family: 'Myriad Pro Regular', Helvetica, sans-serif
+      font-size: 16px
+      letter-spacing: 0.5px
+      line-height: 2
+      color: #aaaaaa
+
+    &__button
+      width: 140px
+      height: 50px
+      margin-top: 40px
+
+      fonta-family: 'Myriad Pro Regular', Helvetica, sans-serif
+      font-size: 16px
+      font-weight: bold
+      border: 1px solid #aaaaaa
+      background-color: white
+
+      cursor: pointer
+      transition: 300ms
+
+      &:hover
+        color: white
+        border-color: black
+        background-color: #aaaaaa
+
+    &--reverse
+      flex-direction: row-reverse
+</style>
