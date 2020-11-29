@@ -44,4 +44,14 @@
 
     &__span
       color: black
+
+@media screen and (max-width: 1600px)
+  .footer
+    &__container
+      height: 120px
+      padding: 0 80px 30px
+
+    &__company
+      margin-bottom: 5px
+      font-size: 20px
 </style>

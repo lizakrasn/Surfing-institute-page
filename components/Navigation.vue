@@ -64,4 +64,12 @@
 
     &__active
       color: black
+
+@media screen and (max-width: 1400px)
+  .navigation
+    padding: 95px 80px 0
+
+@media screen and (max-width: 1200px)
+  .navigation
+    padding: 50px 80px 0
 </style>

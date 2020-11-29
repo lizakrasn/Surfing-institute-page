@@ -18,7 +18,7 @@ export default Vue.extend({
     position: relative
 
     &::after
-      width: 260px
+      width: inherit
       display: block
 
       content: ""
@@ -40,6 +40,7 @@ export default Vue.extend({
       font-family: 'Myriad Pro Regular', Helvetica, sans-serif
       font-style: italic
       line-height: 2
+      font-size: 16px
       letter-spacing: 0.5px
 
       color: #aaaaaa
@@ -48,5 +49,24 @@ export default Vue.extend({
       margin: 10px 0 20px
       font-family: 'Myriad Pro Regular', Helvetica, sans-serif
       font-weight: bold
+      font-size: 16px
       letter-spacing: 0px
+
+@media screen and (max-width: 1400px)
+  .reviewItem
+    &__text
+      font-size: 15px
+    
+    &__name
+      margin: 5px 0 10px
+      font-size: 15px
+
+@media screen and (max-width: 1200px)
+  .reviewItem
+    width: 470px
+
+    &::before
+      width: 25px
+      height: 25px
+      background-size: contain
 </style>

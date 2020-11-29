@@ -43,4 +43,19 @@ export default Vue.extend({
       letter-spacing: 1px
       color: #2ab738
 
+@media screen and (max-width: 1600px)
+  .instractor
+    &__photo
+        width: 230px
+        height: 310px
+
+    &__name
+      margin: 15px 0 5px
+      font-size: 25px
+
+@media screen and (max-width: 1200px)
+  .instractor
+    &__photo
+      width: 200px
+      height: 290px
 </style>

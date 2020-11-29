@@ -62,4 +62,42 @@ export default Vue.extend({
 
     &--reverse
       flex-direction: row-reverse
+
+@media screen and (max-width: 1600px)
+  .post
+    &__image
+      width: 450px
+      height: 300px
+
+    &__title
+      margin-bottom: 5px
+      font-size: 28px
+
+    &__text
+      width: 380px
+      font-size: 15px
+    
+    &__button
+      width: 100px
+      height: 40px
+      margin-top: 20px
+      font-size: 15px
+
+@media screen and (max-width: 1200px)
+  .post
+    &__image
+      width: 300px
+      height: 200px
+
+    &__title
+      font-size: 22px
+
+    &__text
+      width: 280px
+    
+    &__button
+      width: 90px
+      height: 35px
+      margin-top: 10px
+      font-size: 13px
 </style>

@@ -42,4 +42,25 @@ export default Vue.extend({
       font-weight: normal
       letter-spacing: 0.5px
       text-align: center
+
+@media screen and (max-width: 1600px)
+  .blog
+    &__posts-container
+      width: 900px
+
+    & .post:first-child
+      margin-bottom: 100px
+    
+    &__title
+      margin-bottom: 50px
+      font-size: 38px
+
+@media screen and (max-width: 1400px)
+  .blog
+    padding-bottom: 180px
+
+@media screen and (max-width: 1200px)
+  .blog
+    &__posts-container
+      width: 700px
 </style>

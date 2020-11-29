@@ -66,7 +66,7 @@ export default Vue.extend({
       width: 40px
       height: 70px
       background-repeat: no-repeat
-      background-size: cover
+      background-size: contain
       cursor: pointer
 
     &__button-left
@@ -90,4 +90,36 @@ export default Vue.extend({
 
     &__dots-item--active
       background-color: black
+
+@media screen and (max-width: 1600px)
+  .instractors
+    &__title
+      margin-bottom: 50px
+      font-size: 38px
+
+    &__gallery
+      width: 900px
+      margin: 0 30px
+
+    &__button
+      width: 30px
+      height: 55px
+
+@media screen and (max-width: 1400px)
+  .instractors
+    padding: 180px 0
+
+@media screen and (max-width: 1200px)
+  .instractors
+    &__title
+      margin-bottom: 25px
+      font-size: 28px
+
+    &__gallery
+      width: 700px
+      margin: 0 30px
+
+    &__button
+      width: 20px
+      height: 35px
 </style>

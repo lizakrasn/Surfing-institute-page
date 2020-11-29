@@ -25,4 +25,11 @@
       letter-spacing: 1px
       text-align: center
       color: #aaaaaa
+
+@media screen and (max-width: 1400px)
+  .header
+    padding: 180px 0
+
+    &__title
+      font-size: 52px
 </style>

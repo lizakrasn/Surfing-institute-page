@@ -36,4 +36,17 @@
       &:hover
         background-color: #aaaaaa
         color: white
+
+@media screen and (max-width: 1400px)
+  .enroll
+    padding-bottom: 120px
+
+    &__title
+      font-size: 40px
+
+    &__button
+      width: 130px
+      height: 45px
+      margin-top: 50px
+      font-size: 15px
 </style>
