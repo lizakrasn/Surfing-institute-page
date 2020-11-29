@@ -1,8 +1,15 @@
 <template lang="pug">
   nav.navigation
+    input(
+      type="checkbox"
+      id="navigation-toggler"
+    ).navigation__toggler
+
+    label(for="navigation-toggler").navigation__toggler-label
+
     .div.navigation__image
       img(src="~assets/images/logo.png" alt="logo").navigation__logo
-    
+
     ul.navigation__list
       li.navigation__item
         nuxt-link(
@@ -40,6 +47,25 @@
     flex-direction: row
     justify-content: space-between
     align-items: flex-end
+
+    &__toggler-label
+      display: none
+      color: #000
+      z-index: 2
+
+    &__toggler-label::before
+      content: "\2630"
+      font-size: 24px
+      color: black
+
+    &__toggler:checked ~ &__toggler-label::before 
+      content: "x"
+      font-size: 24px
+      font-family: 'Myriad Pro Regular', Helvetica, sans-serif
+      color: black
+
+    &__toggler
+      display: none
 
     &__logo
       width: 41px
@@ -90,7 +116,28 @@
     &__logo
         width: 25px
         height: 20px
-    
+
+    &__toggler-label
+      display: inline-block
+
     &__list
-      display: none
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100vh
+      flex-direction: column
+      align-items: center
+      padding: 150px 0
+
+      background-color: white
+      z-index: 1
+
+    &__item
+      margin: 0
+      padding-bottom: 30px
+      font-size: 30px
+
+    &__toggler:not(:checked) ~ &__list
+      transform: translate(-100%, 0)
 </style>

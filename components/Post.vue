@@ -1,6 +1,7 @@
 <template lang="pug">
   .post
-    img(v-bind:src="imageUrl" alt="surfer").post__image
+    .post__image-container
+      img(v-bind:src="imageUrl" alt="surfer").post__image
     .post__info
       p.post__title {{title}}
       p.post__text {{text}}
@@ -21,10 +22,18 @@ export default Vue.extend({
     justify-content: space-between
     align-items: center
 
+    &:hover .post__image
+      transform: scale(1.2)
+
+    &__image-container
+      overflow: hidden
+
     &__image
       width: 525px
       height: 355px
       object-fit: cover
+
+      transition: 300ms
 
     &__title
       margin-bottom: 15px
@@ -104,10 +113,12 @@ export default Vue.extend({
   .post
     flex-direction: column
 
+    &__image-container
+      margin-bottom: 10px
+
     &__image
       width: 500px
       height: 250px
-      margin-bottom: 10px
 
     &__text
       width: 500px
