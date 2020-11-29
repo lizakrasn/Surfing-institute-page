@@ -1,7 +1,8 @@
 <template lang="pug">
   .blog
     h1.blog__title Posts
-    ul.blog__posts-list
+    Loader(v-if="posts === null").blog__loader
+    ul(v-else).blog__posts-list
       PostOfBlog(
         v-for="(post, i) of posts"
         v-bind:post="post"
@@ -14,6 +15,7 @@
 <script lang="ts">
 import Vue from 'vue'
 import PostOfBlog from "@/components/PostOfBlog"
+import Loader from '@/components/Loader'
 export default Vue.extend({
   data() {
     return {
@@ -41,7 +43,8 @@ export default Vue.extend({
       })
   },
   components: {
-    PostOfBlog
+    PostOfBlog,
+    Loader
   },
 })
 </script>
@@ -49,6 +52,10 @@ export default Vue.extend({
 <style lang="sass" scoped>
   .blog
     padding: 50px
+
+    &__loader
+      margin: 50px auto
+      width: 100%
 
     &__posts-list
       padding: 0

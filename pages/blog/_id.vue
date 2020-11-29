@@ -1,13 +1,16 @@
 <template lang="pug">
-  .post
+  Loader(v-if="post===null").loader
+  .post(v-else)
     .post__info-container
       img(v-bind:src="require(`~/assets/images/imagesOfPosts/${images[this.$route.params.id % images.length]}`)").post__image
       .post__info
-        p.post__title {{post ? post.title : "Loading..."}}
-        p.post__text {{post ? post.body : "Loading..."}}
+        p.post__title {{post.title}}
+        p.post__text {{post.body}}
     p.post__comments-title Comments:
     .post__comments
+      Loader(v-if="comments===null")
       Comment(
+        v-else
         v-for="(comment, i) of comments"
         v-bind:comment="comment"
         v-bind:index="i"
@@ -18,6 +21,7 @@
 <script lang="ts">
 import Vue from 'vue'
 import Comment from '@/components/Comment'
+import Loader from "@/components/Loader"
 export default Vue.extend({
   data() {
     return {
@@ -50,11 +54,17 @@ export default Vue.extend({
       .then(json => {
         this.comments = json
       })
+  },
+  components: {
+    Loader
   }
 })
 </script>
 
 <style lang="sass" scoped>
+  .loader
+    padding: 0 50px
+
   .post
     margin: 30px
     padding: 50px
