@@ -69,4 +69,14 @@ export default Vue.extend({
       width: 25px
       height: 25px
       background-size: contain
+
+@media screen and (max-width: 540px)
+  .reviewItem
+    width: 280px
+
+    &::before
+      width: 15px
+      height: 15px
+      left: -10px
+      top: 10px
 </style>

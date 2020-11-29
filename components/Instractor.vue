@@ -58,4 +58,10 @@ export default Vue.extend({
     &__photo
       width: 200px
       height: 290px
+
+@media screen and (max-width: 520px)
+  .instractor
+    &__name
+      margin: 5px
+      font-size: 18px
 </style>

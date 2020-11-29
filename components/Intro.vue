@@ -107,4 +107,20 @@ export default Vue.extend({
       width: 500px
       display: flex
       justify-content: space-between
+
+@media screen and (max-width: 520px)
+  .intro
+    &__reviews
+      width: 280px
+
+    &__title
+      margin-bottom: 0px
+      font-size: 20px
+
+    &__videos
+      width: 280px
+
+    &__paragraph
+      margin: 5px 0
+      font-size: 20px
 </style>

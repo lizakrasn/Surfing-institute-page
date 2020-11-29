@@ -49,4 +49,17 @@
       height: 45px
       margin-top: 50px
       font-size: 15px
+
+@media screen and (max-width: 520px)
+  .enroll
+    padding-bottom: 80px
+
+    &__title
+      font-size: 20px
+
+    &__button
+      width: 100px
+      height: 35px
+      margin-top: 25px
+      font-size: 15px
 </style>

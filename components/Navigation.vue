@@ -72,4 +72,25 @@
 @media screen and (max-width: 1200px)
   .navigation
     padding: 50px 80px 0
+
+@media screen and (max-width: 850px)
+  .navigation
+    padding: 50px 50px 0
+
+    &__list
+      font-size: 15px
+
+    &__item
+      margin-left: 35px
+
+@media screen and (max-width: 520px)
+  .navigation
+    padding: 30px 20px 0
+
+    &__logo
+        width: 25px
+        height: 20px
+    
+    &__list
+      display: none
 </style>

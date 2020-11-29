@@ -32,4 +32,29 @@
 
     &__title
       font-size: 52px
+
+@media screen and (max-width: 1200px)
+  .header
+    &__title
+      font-size: 40px
+
+@media screen and (max-width: 850px)
+  .header
+    &__title
+      font-size: 28px
+    
+    &__subtitle
+      margin: 20px auto 0
+      width: 400px
+
+@media screen and (max-width: 520px)
+  .header
+    padding: 80px 0
+
+    &__title
+      font-size: 20px
+
+    &__subtitle
+      margin: 10px auto 0
+      width: 260px
 </style>

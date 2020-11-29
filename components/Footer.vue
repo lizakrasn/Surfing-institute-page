@@ -54,4 +54,30 @@
     &__company
       margin-bottom: 5px
       font-size: 20px
+
+@media screen and (max-width: 850px)
+  .footer
+    &__container
+      height: 80px
+      padding: 0 50px 20px
+
+    &__company
+      margin-bottom: 5px
+      font-size: 15px
+
+    &__comment,
+    &__designer
+      font-size: 12px
+
+@media screen and (max-width: 520px)
+  .footer
+    &__container
+      padding: 0 20px 10px
+      flex-direction: column
+      justify-content: flex-end
+      align-items: center
+
+    &__company
+      font-size: 12px
+      text-align: center
 </style>

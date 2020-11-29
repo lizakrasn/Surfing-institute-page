@@ -65,11 +65,30 @@ export default Vue.extend({
       height: 120px
 
 @media screen and (max-width: 1200px)
-    .video
-      width: 500px
-      height: 360px
+  .video
+    width: 500px
+    height: 360px
 
-      &--small
-        width: 230px
-        height: 150px
+    &--small
+      width: 230px
+      height: 150px
+
+@media screen and (max-width: 540px)
+  .video
+    width: 280px
+    height: 160px
+
+    &__play
+      bottom: 10px
+      left: 10px
+      width: 35px
+      height: 35px
+
+    &--small
+      width: 130px
+      height: 100px
+
+      .video__play
+        bottom: -5px
+        left: -5px
 </style>

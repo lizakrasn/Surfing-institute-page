@@ -18,7 +18,6 @@ export default Vue.extend({
 <style lang="sass" scoped>
   .post
     display: flex
-    flex-direction: row
     justify-content: space-between
     align-items: center
 
@@ -100,4 +99,28 @@ export default Vue.extend({
       height: 35px
       margin-top: 10px
       font-size: 13px
+
+@media screen and (max-width: 850px)
+  .post
+    flex-direction: column
+
+    &__image
+      width: 500px
+      height: 250px
+      margin-bottom: 10px
+
+    &__text
+      width: 500px
+
+@media screen and (max-width: 520px)
+  .post
+    &__image
+      width: 280px
+      height: 150px
+
+    &__title
+      font-size: 18px
+
+    &__text
+      width: 280px
 </style>

@@ -122,4 +122,43 @@ export default Vue.extend({
     &__button
       width: 20px
       height: 35px
+
+@media screen and (max-width: 850px)
+  .instractors
+    padding: 180px 0
+
+    &__gallery
+      width: 420px
+      margin: 0 15px
+      overflow: hidden
+    
+    &__gallery-item
+      margin-right: 20px
+
+    &__button
+      width: 15px
+      height: 25px
+
+    &__dots
+      width: 50px
+      margin: 25px auto 0
+
+    &__dots-item
+      width: 10px
+      height: 10px
+      border: 1px solid black
+
+@media screen and (max-width: 520px)
+  .instractors
+    padding: 60px 0 80px
+
+    &__gallery
+      width: 200px
+
+    &__title
+      margin-bottom: 15px
+      font-size: 20px
+
+    &__dots
+      margin: 10px auto 0
 </style>

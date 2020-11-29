@@ -63,4 +63,27 @@ export default Vue.extend({
   .blog
     &__posts-container
       width: 700px
+
+    &__title
+      margin-bottom: 25px
+      font-size: 28px
+
+@media screen and (max-width: 850px)
+  .blog
+    &__posts-container
+      width: 500px
+
+    & .post:first-child
+      margin-bottom: 25px
+
+@media screen and (max-width: 520px)
+  .blog
+    padding-bottom: 80px
+
+    &__title
+      font-size: 20px
+      margin-bottom: 15px
+
+    &__posts-container
+      width: 280px
 </style>
