@@ -17,7 +17,7 @@ import PostOfBlog from "@/components/PostOfBlog"
 export default Vue.extend({
   data() {
     return {
-      posts: [],
+      posts: null,
       images: [
         "billy-1.jpg",
         "cape-town.jpg",

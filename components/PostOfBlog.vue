@@ -2,7 +2,7 @@
   li.post
     img(v-bind:src="imageUrl").post__image
     .post__info
-      p.post__title {{post.title}}
+      a(v-bind:href="'/blog/' + post.id" target="blank").post__title {{post.title}}
       p.post__text {{post.body}}
 </template>
 
@@ -54,8 +54,13 @@ export default Vue.extend({
       font-family: 'Playfair Display', 'Times New Roman', Times, serif
       font-size: 24px
       text-transform: capitalize
+      text-decoration: none
+      color: black
       cursor: pointer
-    
+
+      &:hover
+        color: blue
+
     &__text
       font-family: 'Playfair Display', 'Times New Roman', Times, serif
       font-size: 15px
