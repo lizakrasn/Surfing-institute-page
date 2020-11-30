@@ -18,7 +18,7 @@ export default Vue.extend({
   name: "AlbumItem",
   props: ["album"],
   mounted() {
-    fetch('http://jsonplaceholder.typicode.com/photos?albumId=' + this.album.id)
+    fetch('https://jsonplaceholder.typicode.com/photos?albumId=' + this.album.id)
       .then(response => response.json())
       .then(json => {
         this.imageUrl = json[0].url
