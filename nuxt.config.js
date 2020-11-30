@@ -12,6 +12,11 @@ export default {
     ]
   },
 
+  target: 'static',
+  router: {
+    base: '/Surfing-institute-page/'
+  },
+
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
   ],
