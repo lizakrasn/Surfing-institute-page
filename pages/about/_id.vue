@@ -80,13 +80,13 @@ export default Vue.extend({
     }
   },
   mounted() {
-    fetch('http://jsonplaceholder.typicode.com/users/' + this.$route.params.id)
+    fetch('https://jsonplaceholder.typicode.com/users/' + this.$route.params.id)
       .then(response => response.json())
       .then(json => {
         this.user = json
       }),
 
-    fetch('http://jsonplaceholder.typicode.com/albums?userId=' + this.$route.params.id)
+    fetch('https://jsonplaceholder.typicode.com/albums?userId=' + this.$route.params.id)
       .then(response => response.json())
       .then(json => {
         this.albums = json
