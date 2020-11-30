@@ -1,5 +1,5 @@
 <template lang="pug">
-  .blog
+  .blog.animation-fadeIn
     p.blog__title Recent Blogs By User
     .blog__posts-container
       Post(

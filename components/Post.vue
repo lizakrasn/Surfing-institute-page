@@ -1,5 +1,5 @@
 <template lang="pug">
-  .post
+  .post.animation-fadeIn
     .post__image-container
       img(v-bind:src="imageUrl" alt="surfer").post__image
     .post__info

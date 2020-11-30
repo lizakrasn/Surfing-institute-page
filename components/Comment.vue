@@ -28,6 +28,7 @@ export default Vue.extend({
     background-color: white
     border: 2px solid #aaaaaa
     border-radius: 20px
+    transition: 300ms
 
     &:hover
       background-color: #aaaaaa

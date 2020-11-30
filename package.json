@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-first-project",
+  "name": "surfing_page",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -11,7 +11,9 @@
   "dependencies": {
     "bootstrap": "^4.5.3",
     "core-js": "^3.6.5",
-    "nuxt": "^2.14.6"
+    "nuxt": "^2.14.6",
+    "swiper": "5.4.5",
+    "vue-awesome-swiper": "^4.1.1"
   },
   "devDependencies": {
     "fibers": "^5.0.0",

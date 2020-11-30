@@ -1,5 +1,5 @@
 <template lang="pug">
-  .footer
+  .footer.animation-fadeIn
     .footer__container
       .footer__company-info
         p.footer__company Beach Surfing

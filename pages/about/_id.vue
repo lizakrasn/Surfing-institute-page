@@ -7,23 +7,29 @@
         p.user__name {{user.name}}
         p.user__email Email: {{user.email}}
         p.user__phone Phone: {{user.phone}}
-    p.user__title Albums
+    p.user__title 
     Loader(v-if="albums===null").user__loader.loader
-    ul(v-else).user__albums
-      AlbumItem(
+    swiper(v-else :options="swiperOption").swiper.user__albums
+      swiper-slide(
         v-for="(album, i) of albums",
-        v-bind:album="album",
-        v-bind:index="i"
-        v-bind:albumId="album.id"
+        v-bind:index="i",
         v-bind:key="album.id"
-       )
-      
+      )
+        AlbumItem(
+          v-bind:album="album",
+          v-bind:albumId="album.id"
+        )
+      .swiper-button-prev(slot="button-prev")
+      .swiper-button-next(slot="button-next")
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 import AlbumItem from '@/components/AlbumItem'
 import Loader from "@/components/Loader"
+import { Swiper, SwiperSlide, directive } from 'vue-awesome-swiper'
+import 'swiper/css/swiper.css'
+
 export default Vue.extend({
   data() {
     return {
@@ -40,7 +46,25 @@ export default Vue.extend({
         "user8.jpg",
         "user9.jpeg",
         "user10.jpg",
-      ]
+      ],
+      swiperOption: {
+          slidesPerView: 3,
+          spaceBetween: 25,
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev'
+          },
+          breakpoints: {
+            1200: {
+              slidesPerView: 2,
+              spaceBetween: 15
+            },
+            1000: {
+              slidesPerView: 3,
+              spaceBetween: 15
+            }
+          }
+        }
     }
   },
   mounted() {
@@ -58,7 +82,12 @@ export default Vue.extend({
   },
   components: {
     Loader,
-    AlbumItem
+    AlbumItem,
+    Swiper,
+    SwiperSlide
+  },
+  directives: {
+    swiper: directive
   }
 })
 </script>
@@ -103,8 +132,21 @@ export default Vue.extend({
       text-align: center
 
     &__albums
-      margin: 30px 150px
-      padding: 0
+      margin: 30px 100px
+      padding-left:50px
+      padding-right:50px
       display: flex
       overflow: hidden
+
+@media screen and (max-width: 1000px)
+  .user
+    &__info-container
+      justify-content: center
+
+    &__photo
+      width: 200px
+      height: 200px
+
+    &__albums
+      margin: 0 20px
 </style>

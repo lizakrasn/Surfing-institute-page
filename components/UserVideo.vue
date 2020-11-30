@@ -1,5 +1,5 @@
 <template lang="pug">
-  .video
+  .video.animation-fadeIn
     img(v-bind:src="imageUrl" alt="surfing").video__item
     button(type="button").video__play &#9654;
 </template>

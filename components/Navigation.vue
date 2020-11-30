@@ -1,6 +1,7 @@
 <template lang="pug">
   nav.navigation
     input(
+      v-model="isOpenedBurgerMenu"
       type="checkbox"
       id="navigation-toggler"
     ).navigation__toggler
@@ -16,6 +17,7 @@
           exact
           active-class="navigation__active"
           to="/"
+          "@click.native"="closeBurgerMenu()"
         ).navigation__item-link Home
 
       li.navigation__item
@@ -23,6 +25,7 @@
           exact
           active-class="navigation__active"
           to="/about"
+          "@click.native"="closeBurgerMenu()"
         ).navigation__item-link About
 
       li.navigation__item
@@ -30,6 +33,7 @@
           exact
           active-class="navigation__active"
           to="/blog"
+          "@click.native"="closeBurgerMenu()"
         ).navigation__item-link Blog
 
       li.navigation__item
@@ -37,8 +41,25 @@
           exact
           active-class="navigation__active"
           to="/contact"
+          "@click.native"="closeBurgerMenu()"
         ).navigation__item-link Contact
 </template>
+
+<script lang="ts">
+import Vue from 'vue'
+export default Vue.extend({
+  data() {
+    return {
+      isOpenedBurgerMenu: false
+    }
+  },
+  methods: {
+    closeBurgerMenu() {
+      this.isOpenedBurgerMenu = false
+    },
+  }
+})
+</script>
 
 <style lang="sass" scoped>
   .navigation
@@ -47,6 +68,7 @@
     flex-direction: row
     justify-content: space-between
     align-items: flex-end
+    background-color: white
 
     &__toggler-label
       display: none

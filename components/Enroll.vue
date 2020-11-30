@@ -1,5 +1,5 @@
 <template lang="pug">
-  .enroll
+  .enroll.animation-fadeIn
     p.enroll__title Aren't you intrested Yet!
     button.enroll__button Enroll Now
 </template>

@@ -21,7 +21,6 @@ export default Vue.extend({
     fetch('http://jsonplaceholder.typicode.com/photos?albumId=' + this.album.id)
       .then(response => response.json())
       .then(json => {
-        console.log('allarm', json)
         this.imageUrl = json[0].url
       })
   },
@@ -33,6 +32,7 @@ export default Vue.extend({
 
 <style lang="sass" scoped>
   .album
+    width: 280px
     padding: 10px
     border: 3px solid transparent
     border-radius: 10px
@@ -46,7 +46,7 @@ export default Vue.extend({
       font-size: 15px
 
     &__image
-      width: 250px
+      width: 100%
       height: 400px
 
       object-fit: cover
@@ -54,4 +54,11 @@ export default Vue.extend({
     &__name-title
       margin-top: 10px
       font-weight: bold
+
+@media screen and (max-width: 1000px)
+  .album
+    width: 200px
+
+    &__image
+      height: 250px
 </style>

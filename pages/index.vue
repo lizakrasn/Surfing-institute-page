@@ -28,5 +28,15 @@ export default {
 }
 </script>
 
-<style>
+<style lang="sass">
+  .animation-fadeIn
+    animation: fadeIn ease 3s
+
+  @keyframes fadeIn
+    0%
+      opacity:0
+      transform: scale(0.5)
+    100%
+      opacity:1
+      transform: scale(1)
 </style>

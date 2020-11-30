@@ -1,5 +1,5 @@
 <template lang="pug">
-  .instractors
+  .instractors.animation-fadeIn
     h1.instractors__title Popular Instractors
     .instractors__gallery-container
       .instractors__button.instractors__button-left

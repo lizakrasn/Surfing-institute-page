@@ -1,5 +1,5 @@
 <template lang="pug">
-  .intro
+  .intro.animation-fadeIn
     .intro__reviews-container
       p.intro__title Recent Reviews
       .intro__reviews
