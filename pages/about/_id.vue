@@ -56,11 +56,23 @@ export default Vue.extend({
           },
           breakpoints: {
             1200: {
-              slidesPerView: 2,
+              slidesPerView: 3,
               spaceBetween: 15
             },
             1000: {
               slidesPerView: 3,
+              spaceBetween: 15
+            },
+            700: {
+              slidesPerView: 3,
+              spaceBetween: 15
+            },
+            500: {
+              slidesPerView: 2,
+              spaceBetween: 15
+            },
+            300: {
+              slidesPerView: 1,
               spaceBetween: 15
             }
           }
@@ -141,6 +153,22 @@ export default Vue.extend({
 @media screen and (max-width: 1000px)
   .user
     &__info-container
+      padding: 20px
+
+    &__photo
+      width: 200px
+      height: 200px
+    
+    &__info
+      margin: 20px 0 0
+
+    &__albums
+      margin: 0 20px
+
+@media screen and (max-width: 500px)
+  .user
+    &__info-container
+      flex-direction: column
       justify-content: center
 
     &__photo
@@ -148,5 +176,5 @@ export default Vue.extend({
       height: 200px
 
     &__albums
-      margin: 0 20px
+      margin: 0 10px
 </style>
