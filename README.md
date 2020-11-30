@@ -22,4 +22,4 @@ Pages:
 ## Local Deployment  
 * Сlone this repository
 * Run `npm install` in your terminal
-* Run `npm run dev`to run local dev server on http://localhost:3000/
+* Run `npm run dev`to run local dev server on http://localhost:3000/Surfing-institute-page/
