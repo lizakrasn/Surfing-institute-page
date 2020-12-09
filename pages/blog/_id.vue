@@ -49,7 +49,7 @@ export default Vue.extend({
         this.post = json
       })
 
-    fetch('http://jsonplaceholder.typicode.com/comments?postId=' + this.$route.params.id)
+    fetch('https://jsonplaceholder.typicode.com/comments?postId=' + this.$route.params.id)
       .then(response => response.json())
       .then(json => {
         this.comments = json
