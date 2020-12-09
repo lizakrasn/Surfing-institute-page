@@ -2,7 +2,7 @@
   li.post
     img(v-bind:src="imageUrl").post__image
     .post__info
-      a(v-bind:href="'./blog/' + post.id" target="_blank").post__title {{post.title}}
+      a(v-bind:href="'#/blog/' + post.id" target="_blank").post__title {{post.title}}
       p.post__text {{post.body}}
 </template>
 
