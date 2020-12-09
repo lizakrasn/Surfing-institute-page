@@ -14,7 +14,8 @@ export default {
 
   target: 'static',
   router: {
-    base: '/Surfing-institute-page/'
+    base: '/Surfing-institute-page/',
+    mode: 'hash'
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
