@@ -2,7 +2,7 @@
 Click the link to see the [DEMO](https://lizakrasn.github.io/Surfing-institute-page/)
 
 ## Description
-Stack: Nuxt.js, HTML, Pug, SASS, CSS animations, Flexbox, BEM methodology.
+Stack: Vue.js, Nuxt.js, HTML, Pug, SASS, CSS animations, Flexbox, BEM methodology.
 
 Responsive design:
   - Mobile (> 320px)
