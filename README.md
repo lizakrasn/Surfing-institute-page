@@ -1,4 +1,5 @@
 # Surfing institute page
+Click the link to see the [DEMO](https://lizakrasn.github.io/Surfing-institute-page/)
 
 ## Description
 Stack: Nuxt.js, HTML, Pug, SASS, CSS animations, Flexbox, BEM methodology.
